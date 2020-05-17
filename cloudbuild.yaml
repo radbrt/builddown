@@ -17,7 +17,7 @@ images:
   - 'gcr.io/$PROJECT_ID/github.com/radbrt/builddown:latest'
 
 options:
-  machineType: n2d-standard-4
+  machineType: 'N1_HIGHCPU_8'
 
 tags:
   - "buildarticle"
