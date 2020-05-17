@@ -16,7 +16,7 @@ This example uses R and Rmarkdown, but thanks to the flexible build pipeline, th
 There are some tradeoffs though:
 - For larger projects, the build times will be large, possibly racking up compute charges. All input must be stored either in the project or on the internet somewehere - possibly in a cloud bucket. As the project uses GCP it is tempting to use a google bucket for this, but since nobody uses google buckets, they are not really supported by anything in the world and it's a pain to get data from a google bucket into R.
 - For people not immersed in the docker and CI/CD world, this workflow introduces a lot of new concepts. As data analysis is difficult enough as it is, it might not be very tempting to sit down and learn a whole lot of new stuff just for a workflow designed to make some farily esoteric guarantees (don't get me wrong, reproducible research is important, but this workflow only assures technical reproducibility).
-
+- The build machines can be fairly beefy, but there are limits. Currently, the biggest machine that can be used in cloudbuild has 32 cores and 28.8G memory (`n1-highcpu-32`). Sufficient for most purposes, but some will find it lacking. 
 
 ## The way forward
 
