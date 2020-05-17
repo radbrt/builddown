@@ -15,5 +15,9 @@ artifacts:
 images:
   - 'gcr.io/$PROJECT_ID/github.com/radbrt/builddown:$SHORT_SHA'
   - 'gcr.io/$PROJECT_ID/github.com/radbrt/builddown:latest'
+
+options:
+  machinetype: n2d-standard-4
+
 tags:
   - "buildarticle"
