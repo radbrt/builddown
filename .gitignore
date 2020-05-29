@@ -7,7 +7,6 @@ _cache/*
 *.Rproj
 *.Rproj.user
 *.Rhistory
-*.tex
 *.log
 *.pdf
 *.Ruserdata
