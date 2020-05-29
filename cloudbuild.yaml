@@ -9,7 +9,7 @@ steps:
 artifacts:
   objects:
     location: 'gs://com_radbrt_builddown/'
-    paths: ['new_sources.pdf']
+    paths: ['new_sources_$SHORT_SHA.pdf']
 
 
 images:
