@@ -10,3 +10,4 @@ _cache/*
 *.log
 *.pdf
 *.Ruserdata
+.Rproj.user
