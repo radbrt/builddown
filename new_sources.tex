@@ -1,0 +1,446 @@
+\documentclass[11pt,]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
+\usepackage[]{mathpazo}
+
+
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+
+
+
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother
+
+
+
+
+\setcounter{secnumdepth}{0}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+
+\title{Working from home: estimations without surveys \thanks{TBD}  }
+
+
+
+\author{\Large Henning Holgersen\vspace{0.05in} \newline\normalsize\emph{Statistics Norway}  }
+
+
+\date{}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\itshape}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+\titleformat*{\paragraph}{\normalsize\itshape}
+\titleformat*{\subparagraph}{\normalsize\itshape}
+
+
+\usepackage{natbib}
+\bibliographystyle{apsr}
+\usepackage[strings]{underscore} % protect underscores in most circumstances
+
+
+
+\newtheorem{hypothesis}{Hypothesis}
+\usepackage{setspace}
+
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{hyperref}
+
+% move the hyperref stuff down here, after header-includes, to allow for - \usepackage{hyperref}
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[draft,unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Henning Holgersen (Statistics Norway)},
+             pdfkeywords = {big data, surveys, work, text},  
+            pdftitle={Working from home: estimations without surveys},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Add an option for endnotes. -----
+
+
+% add tightlist ----------
+\providecommand{\tightlist}{%
+\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% add some other packages ----------
+
+% \usepackage{multicol}
+% This should regulate where figures float
+% See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
+\usepackage[section]{placeins}
+
+
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{% \usefont{T1}{pnc}{m}{n}
+\setlength{\parindent}{0pt}
+\thispagestyle{plain}
+{\fontsize{18}{20}\selectfont\raggedright 
+\maketitle  % title \par  
+
+}
+
+{
+   \vskip 13.5pt\relax \normalsize\fontsize{11}{12} 
+\textbf{\authorfont Henning Holgersen} \hskip 15pt \emph{\small Statistics Norway}   
+
+}
+
+}
+
+
+
+
+
+
+
+
+\begin{abstract}
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+    \vskip 8.5pt % \small 
+
+\noindent After the Covid-19 pandemic outbreak, working from home has become the
+norm for many. Surveys have tried to capture the extent to which people
+actually work from home, which is a type of problem surveys are good at.
+We have attempted to use alternative approaches and data sources to say
+something about who might be working from home. Alternative data sources
+are rarely a drop-in replacement for surveys. Instead, they answer
+different but related questions.
+
+
+\vskip 8.5pt \noindent \emph{Keywords}: big data, surveys, work, text \par
+
+    \hbox{\vrule height .2pt width 39.14pc}
+
+
+
+\end{abstract}
+
+
+\vskip -8.5pt
+
+
+ % removetitleabstract
+
+\noindent  
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+The Covid-19 pandemic has led practically anyone who can to work from
+home. A priori, we didn't have a lot of information about what
+percentage of the workforce actually had this opportunity, and we knew
+less about what characterizes these people. It is easy to guess that
+office jobs generally can be done from home, but an office job is not
+clearly defined in official statistics.
+
+Surveys after the pandemic took effect have shown that more than 40
+percent of the workforce now works from home. In contrast, some surveys
+prior to the pandemic found that \textasciitilde{}30 percent of the
+workforce were permittet to work from home at least on occasions.
+Naturally, the two questions are different. During the pandemic,
+practically all employers will let employees work from home if possible.
+Before, working from home was somewhat of a perk for the employer to
+grant if they had the opportunity and were so inclined.
+
+In these situations, there are no obvious alternatives to surveys. Two
+possibilities are evaluated here: Full text job ads, and annotating the
+ISCO taxonomy by interpreting the documentation.
+
+Job advertisements may mention in their ad if they have good options for
+working from home. Working from home at times is a valuable perk for
+many, and employers therefore may have an incentive to mention it. This
+approach is contingent of job advertisements actually being available to
+analyze, and it is very difficult to say anything about the total number
+of remote-enabled jobs out there. Even saying something about the
+relative frequency of remote jobs between industries, occupations etc.
+requires calibration. But job advertisements are a rich source of data,
+and if they are readily available, it would be extravagant to dismiss
+them.
+
+The ISCO taxonomy does not involve itself with wether or not the job can
+be done remotely. The documentation, however, includes short but
+informative descriptions of the job. Humans reading these descriptions
+will often have an immediate understanding of the possibilities for
+doing this job remotely. In order to classify each occupation as
+remote-friendly or not. This is a fairly simple job to do, and the ISCO
+documentation is available for anyone online. For anyone who already has
+register or survey data which includes ISCO codes, this is a simple
+approach to augment the data they already have.
+
+The four data sources above (two surveys and to alternative sources),
+answer four different but related questions:
+
+\begin{itemize}
+\tightlist
+\item
+  The surveys before covid asked employees if they had the
+  \emph{opportunity} to work from home, and if so how often.
+\item
+  The surveys after covid primarily ask employees \emph{if} they worke
+  from home (although some nuances exist)
+\item
+  The job ads can tell us about job openings the employer advertises as
+  remote friendly
+\item
+  The ISCO annotations can tell if there is anything about the job
+  itself that prevents it from being performed from home.
+\end{itemize}
+
+These differences can either be vital and not to be confused, relatively
+minor nuances, or informative in themselves.
+
+\hypertarget{what-the-surveys-say}{%
+\section{What the surveys say}\label{what-the-surveys-say}}
+
+\hypertarget{annotating-the-isco-standard}{%
+\section{Annotating the ISCO
+standard}\label{annotating-the-isco-standard}}
+
+The ISCO standard organizes jobs into a set of groups according to the
+tasks and duties undertaken in the job. Using the detailed task
+descriptions listed in the ISCO-08 documentation, we try to provide a
+assertion of whether an occupation is likely able to be performed from
+home. To do this, we created a public labeling job through Amazon
+Mechanical Turk \citep{Turk2020}. Each occupation was presented together
+with a brief description. The exact question formulation was ``Can this
+type of job likely be performed from a home office?'', and an example of
+a job description could be:
+
+\begin{quote}
+Social work and counselling professionals provide advice and guidance to
+individuals, families, groups, communities and organizations in response
+to social and personal difficulties. They assist clients to develop
+skills and access resources and support services needed to respond to
+issues arising from unemployment, poverty, disability, addiction,
+criminal and delinquent behaviour, marital and other problems.
+\end{quote}
+
+The respondent was asked to evaluate wether it was likely that the job
+could be performed primarily from a private home. The alternatives were
+``Yes'', ``No'' and ``Unknown'', which were provided with the following
+description:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \emph{Yes: This job can be performed primarily from an office in a
+  private home}
+\item
+  \emph{No: Substatantial parts of this job must be performed outside
+  the employees home}
+\item
+  \emph{Unknown: There is not enough information to decide}
+\end{enumerate}
+
+In order to reduce the serendipity in the labels, we acquired five
+labels from different respondents for each occupation, and we provided
+an \texttt{uncertain} option in addition to the \texttt{yes/no} options
+in order to reduce arbitrary responses to uninformative occupation
+descriptions. The final labels include an uncertainty measure which
+shows that some of the occupations were evaluated differently by
+different annotators, but no occupation was given a final label of
+``Unknown'' which means we can treat the remote-friendly annotation as a
+binary variable.
+
+Since the job was on Mechanical Turk, there respondents were not subject
+matter experts, and likely reside in different countries. This adds to
+the importance of obtaining more than one label per occupation, but the
+number of labels does not correct for possible cultural differences - it
+is possible that some jobs that cannot be performed remotely in other
+countries can be performed remotely in Norway. We should consider the
+annotations as \texttt{international}, which is also true for the
+ISCO-08 standard itself.
+
+There are two additional approaches to the annotation approach: The ISCO
+documentation includes examples of typical tasks, which can be
+categorized on their own, and an aggregate measure of ``what fraction of
+this job can be done at home'' can be calculated. Of course, this
+measure will not be able to take into account the amount of time spent
+at each task - there may be no substitute for surveys here.
+
+The other approach, very similar, is to use ontologies like ESCO, which
+includes tasks. This may open the possibility of calculating ``nearest
+remote neighbor'', building on similarities between
+
+\hypertarget{utilizing-job-ads}{%
+\section{Utilizing job ads}\label{utilizing-job-ads}}
+
+The market for job ads is relatively concentrated in Norway. For over 10
+years, there has been two major actors in this market: the commercial
+website finn.no, and the norwegian welfare administration, nav.no. Many
+ads have been posted on both sites, but starting in 2018 the nav.no
+website republishes ads from finn.no. In the summer of 2019, NAV
+published an archive of job ads going back to 2002. This data set (one
+giant csv file) contains the title and full text of the ad, information
+about the employer including organizational number (ID from the central
+business register), and an ISCO classification made by employees at NAV.
+
+The job ads can tell us if the employer explicitly advertise rempte
+possibilities, but we are faced with a question: How do we know? There
+are basically three approaches.
+
+Searching for specific words or phrases that are highly suggestive of
+remote possibilities. This approach works if the language, like
+norwegian, has a small number of words that indicate this. The solution
+is low-tech, but may be surprisingly effective for certain languages.
+
+The search can be amended by using word embeddings to find similar
+words. Simple word embeddings, however, will not allow us to find
+phrases that indicate remote possibilities. In order to use that
+approach, advanced NLP techniques such as Named Entity Recognition must
+be considered.
+
+Since results are highly language dependent, we will limit our foray
+into NLP.
+
+Using a simple search, we find 3500 mentions of \emph{hjemmekontor} or
+\emph{heimekontor}. This is very low considering there are 2.6 million
+ads, but still enough to make some inferences.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#load('wfh.RData')}
+\KeywordTok{loadd}\NormalTok{(wfh_plot_data)}
+
+\NormalTok{wfh_plot_data }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(aar, andel_stillinger)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figs/unnamed-chunk-1.pdf}
+
+That's all folks!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(iris)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+\end{verbatim}
+
+
+
+
+
+\newpage
+\singlespacing 
+\end{document}
