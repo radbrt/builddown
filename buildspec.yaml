@@ -9,15 +9,16 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo "artifact backup" > test.txt
-      - echo Building the Docker image...          
-      - docker run $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest Rscript make_drake.R
+      - echo "artifact research" > test.txt
+      - echo $(pwd) >> test.txt
+      - echo $(ls -hal) >> test.txt
+      - echo Pulling the Docker image...
+      - docker pull $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest
+      - docker run -v data/:/ builddown Rscript make_drake.R
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - article.html
+    - data/article.html
     - test.txt
-
-
