@@ -14,7 +14,7 @@ phases:
       - echo $(ls -hal) >> test.txt
       - echo Pulling the Docker image...
       - docker pull $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest
-      - docker run -v data/:/ builddown Rscript make_drake.R
+      - docker run -v $(pwd):/data 535413804026.dkr.ecr.eu-central-1.amazonaws.com/builddown /bin/sh -c 'cd /data; Rscript make_drake.R'
   post_build:
     commands:
       - echo Build completed on `date`
