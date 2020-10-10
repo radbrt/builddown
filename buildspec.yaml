@@ -9,13 +9,15 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - echo "artifact backup" > test.txt
       - echo Building the Docker image...          
-      - docker run -v ./:/data/ builddown Rscript make_drake.R
+      - docker run builddown Rscript make_drake.R
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
     - article.html
+    - test.txt
 
 
