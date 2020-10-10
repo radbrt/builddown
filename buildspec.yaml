@@ -4,14 +4,14 @@ phases:
   pre_build:
     commands:
       - docker login -u AWS -p $(aws ecr get-login-password --region $AWS_DEFAULT_REGION) $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com
-      - docker build -t builddown -t $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest .
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest
+      #- docker build -t builddown -t $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest .
+      #- docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest
   build:
     commands:
       - echo Build started on `date`
       - echo "artifact backup" > test.txt
       - echo Building the Docker image...          
-      - docker run builddown Rscript make_drake.R
+      - docker run $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/builddown:latest Rscript make_drake.R
   post_build:
     commands:
       - echo Build completed on `date`
